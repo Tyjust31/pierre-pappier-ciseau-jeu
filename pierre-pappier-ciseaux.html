@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/votre_version/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Pierre papier ciseaux</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <p class="title"> Pierre Papier Ciseaux </p>
+
+    <button onclick=" playgame('pierre') " class="move-buttom"><img src="images/pierre-emoji.png "
+            class="move-icon"></button>
+    <button onclick="playgame('papier') " class="move-buttom"><img src="images/papier-emoji.png"
+            class="move-icon"></button>
+    <button onclick=" playgame('ciseaux')" class="move-buttom"><img src="images/ciseaux-emoji.png"
+            class="move-icon"></button><br>
+    <p class="js-result result"></p>
+    <p class="js-moves "> </p>
+    <p class="js-score score"></p>
+    <button class="reset-score-buttom" onclick="score.victoire=0; score.defaite=0; score.egalite=0; localStorage.removeItem('score');
+        updatescore();">réinitialiser le
+        score</button>
+
+    <footer>
+        <p>&copy; 2023 Thierry Allou. Tous droits réservés.</p>
+        <a href="https://github.com/Tyjust31" target="_blank">
+            <img src="images/github.png" alt="">
+        </a>
+    </footer>
+
+
+
+
+
+    <script src="main.js"> </script>
+
+
+</body>
+
+</html>

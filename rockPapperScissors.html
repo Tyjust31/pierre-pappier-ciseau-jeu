@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre papier ciseaux</title>
+</head>
+
+<body>
+    <p> Pierre papier ciseaux </p>
+    <button onclick="playgame('pierre')">Pierre</button>
+    <button onclick="playgame('papier') ">papier</button>
+    <button onclick=" playgame('ciseaux')">ciseaux</button>
+
+    <script>
+
+        function playgame(objet) {
+            let resultat = '';
+            let mouvementDeIa = choixIa();
+
+            if (objetchoisi = 'ciseaux') {
+                if (mouvementDeIa === 'pierre') {
+                    resultat = 'perdue.';
+                } else if (mouvementDeIa === 'papier') {
+                    resultat = 'gagnez.';
+                }
+                else if (mouvementDeIa === 'ciseaux') {
+                    resultat = 'Egalite.';
+                    //ciseaux ---------------------------------------------
+                }
+
+            } if (objetchoisi = 'papier') {
+                if (mouvementDeIa === 'pierre') {
+                    resultat = 'gagnez.';
+                } else if (mouvementDeIa === 'papier') {
+                    resultat = 'Egalite.';
+                }
+                else if (mouvementDeIa === 'ciseaux') {
+                    resultat = 'perdue.';
+                    //papier ---------------------------------------------
+                }
+
+
+            } else if (objetchoisi = 'pierre') {
+                if (mouvementDeIa === 'pierre') {
+                    resultat = 'Egalite.';
+                } else if (mouvementDeIa === 'papier') {
+                    resultat = 'perdue.';
+                }
+                else if (mouvementDeIa === 'ciseaux') {
+                    resultat = 'gagnez.';
+
+                }
+                //pierre ---------------------------------------------
+            }
+
+
+
+            alert(`tu as choisi le ${objetchoisi} et l'IA a choisi ${mouvementDeIa}. 
+              ${resultat}`);
+
+
+
+
+        }
+
+        function choixIa() {
+            let mouvementDeIa = '';
+            const randomnumbers = Math.random();
+
+
+            if (randomnumbers >= 0 && randomnumbers < 1 / 3) {
+                mouvementDeIa = 'pierre';
+            } else if (randomnumbers >= 1 / 3 && randomnumbers < 2 / 3) {
+                mouvementDeIa = 'papier';
+            }
+            else if (randomnumbers >= 2 / 3 && randomnumbers < 1) {
+                mouvementDeIa = 'ciseaux';
+
+            }
+
+            return mouvementDeIa;
+        }
+    </script>
+</body>
+
+</html>
